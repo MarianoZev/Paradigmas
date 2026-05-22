@@ -1,0 +1,169 @@
+ /* --- ESTILOS GENERALES Y SCROLL SNAP --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Contenedor principal con scroll snap */
+        main {
+            flex: 1;
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            padding-left: 260px; /* Espacio para el nav fijo */
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+            padding: 40px;
+            background-color: #ffffff;
+        }
+
+        /* --- NAVEGACIÓN FIJA A LA IZQUIERDA --- */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 260px;
+            height: 100vh;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            z-index: 10;
+        }
+
+        nav h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            color: #888;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #aaaaaa;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            display: block;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* ---BLOQUES DE CONTENIDO --- */
+        /* Títulos principales (Fondo negro, texto blanco) */
+        .header-bloque {
+            background-color: #000000;
+            color: #ffffff;
+            width: 100%;
+            max-width: 800px;
+            padding: 20px 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+     #peli-acto1, #peli-acto2, #peli-acto3 {
+    background-image: url('./images/viernes.webp');
+    background-size: cover;       /* Obliga a la imagen a cubrir toda la pantalla */
+    background-position: center;   /* Centra la imagen para que no se corte feo */
+    background-repeat: no-repeat;  /* Evita que la imagen se duplique como mosaico */
+        height: 100vh;                 /* Fuerza a que mida toda la pantalla de alto */
+    display: flex;                 /* Permite centrar el bloque de texto */
+    justify-content: center;       /* Centra horizontalmente */
+    align-items: center;           /* Centra verticalmente */
+    background-attachment: fixed;  /* Fija la imagen al fondo de la ventana */
+}
+
+#corto-acto1, #corto-acto2, #corto-acto3 {
+    background-image: url('./images/beehive.webp');
+    background-size: cover;       /* Obliga a la imagen a cubrir toda la pantalla */
+    background-position: center;   /* Centra la imagen para que no se corte feo */
+    background-repeat: no-repeat;  /* Evita que la imagen se duplique como mosaico */
+        height: 100vh;                 /* Fuerza a que mida toda la pantalla de alto */
+    display: flex;                 /* Permite centrar el bloque de texto */
+    justify-content: center;       /* Centra horizontalmente */
+    align-items: center;           /* Centra verticalmente */
+    background-attachment: fixed;  /* Fija la imagen al fondo de la ventana */
+
+}
+
+        /* Contenedores de texto (Fondo blanco, texto negro) */
+        .content-bloque {
+            background-color: #ffffff;
+            color: #000000;
+            width: 100%;
+            max-width: 800px;
+            padding: 40px;
+            border: 1px solid #e0e0e0;
+            border-top: none;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .content-bloque h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 5px;
+        }
+
+        .content-bloque ul {
+            list-style-position: inside;
+            margin-top: 15px;
+        }
+
+        .content-bloque li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .content-bloque strong {
+            font-weight: 700;
+        }
+        
+        .subtitulo-peli {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+            font-size: 1rem;
+            text-transform: none;
+            letter-spacing: 0;
+        }
