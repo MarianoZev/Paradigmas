@@ -39,49 +39,63 @@
         }
 
         /* --- NAVEGACIÓN FIJA A LA IZQUIERDA --- */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 260px;
-            height: 100vh;
-            background-color: #000000;
-            color: #ffffff;
-            padding: 30px 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            z-index: 10;
-        }
+ nav {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espaciado entre bloques de películas */
+    pointer-events: none; /* Evita que el contenedor invisible tape clics */
+}
 
-        nav h2 {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-            color: #888;
-        }
+nav > div {
+    pointer-events: auto; 
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
 
-        nav a {
-            color: #aaaaaa;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-            display: block;
-        }
 
-        nav a:hover {
-            color: #ffffff;
-        }
+nav h2 {
+    color: #ffffff;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    opacity: 0.9;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo negro con ligera transparencia */
+    backdrop-filter: blur(5px); /* Efecto blur moderno si el OS lo soporta */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+nav ul li a {
+    color: #bbbbbb;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Efecto al pasar el mouse por encima */
+nav ul li a:hover {
+    color: #ffffff;
+    transform: translateX(-3px); /* Se mueve sutilmente a la izquierda */
+}
+
+
 
         /* ---BLOQUES DE CONTENIDO --- */
         /* Títulos principales (Fondo negro, texto blanco) */
